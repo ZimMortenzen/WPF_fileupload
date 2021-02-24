@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="700">
     <Grid>
-        <DockPanel>
+        <DockPanel Height="369" VerticalAlignment="Top">
             <StatusBar DockPanel.Dock="Bottom" Height="30">
-                <StatusBarItem >
-                    <TextBlock Name="lblCounter" />
+                <StatusBarItem Margin="0,0,0,0" >
+                    <TextBlock Name="tbStatusBar" Height="30"></TextBlock>
                 </StatusBarItem>
             </StatusBar>
             <Menu Height="30" FontSize="16" DockPanel.Dock="Top"  VerticalAlignment="Top">
@@ -23,11 +23,11 @@
                     <MenuItem Header="_About" Foreground="Gray" Click="MenuItem_Click_About" />
                 </MenuItem>
             </Menu>
-            <TextBlock Name="tbText">
-                
-            </TextBlock>
-        
-            
+            <TextBox Name="tbText">
+
+            </TextBox>
+
+
         </DockPanel>
     </Grid>
 </Window>

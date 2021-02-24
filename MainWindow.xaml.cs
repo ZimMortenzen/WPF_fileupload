@@ -1,19 +1,6 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace cs06_5_StatusBarMenuBar
 {
@@ -22,7 +9,10 @@ namespace cs06_5_StatusBarMenuBar
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
+        private string fileContent = string.Empty;
+        private string filePath = string.Empty;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,43 +20,35 @@ namespace cs06_5_StatusBarMenuBar
 
         private void MenuItem_Click_Open(object sender, RoutedEventArgs e)
         {
-            //WindowOpen wOpen = new WindowOpen();
-            //wOpen.Show();
-
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.DefaultExt = ".txt"; // Required file extension 
-            fileDialog.Filter = "Text documents (.txt)|*.txt"; // Optional file extensions
-
-            fileDialog.ShowDialog();
-
-            if (fileDialog.ShowDialog() == DialogResult.HasValue)
+            fileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            
+            if (fileDialog.ShowDialog() == true)
             {
-
-                try
-                {
-                    using (StreamReader file = new StreamReader(fileDialog.FileName)
-                    {
-                        while (!file.EndOfStream)
-                            {
-
-                                tbText.Text += file.ReadLine();
-                            }
-                    }   
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "File not found");
-                    return;
-                }
+                filePath = fileDialog.FileName;
+                tbText.Text = File.ReadAllText(filePath);
             }
-            //tbText.Text = sr.ReadToEnd();
-            file.Close(); 
-            }
+
+            tbStatusBar.Text = "Open";
         }
+ 
 
         private void MenuItem_Click_SaveAs(object sender, RoutedEventArgs e)
         {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                string savePath = saveFileDialog.FileName;
+
+                using (StreamWriter sw = File.CreateText(savePath))
+                {
+                    sw.WriteLine(tbText.Text);
+                }
+            }
+
+            tbStatusBar.Text = "Saved As";
         }
 
         private void MenuItem_Click_Exit(object sender, RoutedEventArgs e)
@@ -77,6 +59,8 @@ namespace cs06_5_StatusBarMenuBar
         private void MenuItem_Click_About(object sender, RoutedEventArgs e)
         {
             tbText.Text = "About about about about about about about about about about about about about about about about about about about about about about about about.";
+            tbStatusBar.Text = "About";
         }
+
     }
 }
