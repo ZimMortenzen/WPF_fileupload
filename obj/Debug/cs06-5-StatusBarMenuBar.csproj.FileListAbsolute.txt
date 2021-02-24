@@ -1,0 +1,17 @@
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.csprojAssemblyReference.cache
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\MainWindow.g.cs
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\App.g.cs
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar_MarkupCompile.cache
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar_MarkupCompile.lref
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\bin\Debug\cs06-5-StatusBarMenuBar.exe.config
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\bin\Debug\cs06-5-StatusBarMenuBar.exe
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\bin\Debug\cs06-5-StatusBarMenuBar.pdb
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\MainWindow.baml
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.g.resources
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06_5_StatusBarMenuBar.Properties.Resources.resources
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.csproj.GenerateResource.cache
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.csproj.CoreCompileInputs.cache
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.exe
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\cs06-5-StatusBarMenuBar.pdb
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\WindowOpen.g.cs
+C:\Users\zimon\source\repos\cs06-5-StatusBarMenuBar\obj\Debug\WindowOpen.baml
